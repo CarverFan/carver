@@ -3,6 +3,8 @@ Python GPS Speedometer &amp; Camera Control
 
 Simple Python3 Tkinter application that displays a GPS powered speedometer and some buttons for controlling the Raspberry Pi Camera module.
 
+The speedometer gauge code (gaugelib.py) was written by Ardiotech.com 
+
 I've written this to be integrated with the OpenAuto Pro application but it does work standalone using the hardware listed below:
 
 Raspberry Pi 3 B+
@@ -30,11 +32,16 @@ Autostart=true
 Then copy all three project files into the /usr/local/bin folder.  Change their ownership and make them executable:
 
 sudo chown root:staff speedo.py
+
 sudo chown root:staff rvcamlib.py
+
 sudo chown root:staff gaugelib.py
 
+
 sudo chmod +x speedo.py
+
 sudo chmod +x rvcamlib.py
+
 sudo chmod +x gaugelib.py
 
 You'll want to edit the rvcamlib.py file and change the recording location variable 'vidpath'.
